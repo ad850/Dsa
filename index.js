@@ -173,3 +173,31 @@ function characterOccurance(str, word) {
   console.log(ans);
 }
 characterOccurance("adityyya","y");
+
+
+Code 19: To find a first pair whose sum is zero
+
+function getSumPairZero(array) {
+  for (const number of array) {
+    for (let index = 1; index < array.length; index++) {
+      const element = array[index];
+      if (number + element === 0) {
+        return { number, element };
+      }
+    }
+  }
+}
+let ans = getSumPairZero([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]);
+
+console.log(ans);
+
+
+Code 22: To find the largest pair of the 2 elements using indexing with sorted elements
+
+function largestPairSumofTwo(array) {
+  const arr = array.sort((a, b) => b - a);
+  const [largest, secondLargest] = arr.splice(0, 2);
+  console.log(`first:${largest} and two: ${secondLargest}`);
+}
+largestPairSumofTwo([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]);
+
