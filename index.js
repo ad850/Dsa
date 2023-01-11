@@ -165,3 +165,11 @@ function characterOccurance(str, letter) {
   console.log(count);
 }
 characterOccurance("aditya", "a");
+
+//or//
+function characterOccurance(str, word) {
+  let arr = str.split("");
+  let ans = arr.filter((val) => val === word).length;
+  console.log(ans);
+}
+characterOccurance("adityyya","y");
